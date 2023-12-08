@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- extra script-->
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+
+ <!--finish-->
+    
+</head>
+<body>
+    <div class='wrapper'>
+  <div class="container">
+    <header id="home">
+      <nav class="navbar">
+        <h2 class="name">Ravi Kumar Choudhary</h2>
+        <ul class="navbar__ul">
+          <li class='link'><a href="#home">Home</a></li>
+          <li class='link'><a href="#portfolio">Projects</a></li>
+          <li class='link'><a href="#skills">Skills</a></li>
+          <li class='link'><a href="#contact">Contact</a></li>
+          <li>
+            <li class='link'><a href="#contact">Profile card</a></li>
+          <li>
+            <!-- Dark Theme Toggle  -->
+            <button class='darkmode'><i class="fas fa-moon"></i></button>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__container">
+        <img src="ravi1.jpg" alt="profile-image">
+        <div class="header__text__container">
+          <p class="header__text">Hi! I am a front-end designer and developer. Here, I've created a simple beginner friendly portfolio  responsive across different browsers and devices.</p>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main class="portfolio" id='portfolio'>
+    <h2 class='portfolio__header'>Projects</h2>
+    <div class="portfolio__container">
+      
+      
+
+    
+
+      
+
+      
+
+    </div>
+
+
+    <!--this is extra work by me-->
+    
+    <h2 class="skills">Skills</h2>
+    <div class="wrapper1">
+      <div class="card1">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">HTML</div>
+      </div>
+      <div class="card1 js">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">CSS</div>
+      </div>
+	  
+	     <div class="card1 node">
+		<div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">JavaScript</div>
+      </div>
+	  
+      <div class="card1 react">
+        <div class="circle">
+          <div class="bar"></div>
+          <div class="box"><span></span></div>
+        </div>
+        <div class="text">NodeJs</div>
+      </div>
+    </div>
+
+    <script>
+      let options = {
+        startAngle: -1.55,
+        size: 150,
+        value: 0.80,
+        fill: {gradient: ['#a445b2', '#fa4299']}
+      }
+      $(".circle .bar").circleProgress(options).on('circle-animation-progress',
+      function(event, progress, stepValue){
+        $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+      });
+      $(".js .bar").circleProgress({
+        value: 0.50
+      });
+      $(".node .bar").circleProgress({
+        value: 0.40
+      });      
+	  $(".react .bar").circleProgress({
+        value: 0.30
+      });
+    </script>
+
+    <!-- finish-->
+
+   
+    <footer>
+      <div class="wrapper">
+        <div class="footer__text-container" id='contact'>
+          <h2>Contact</h2>
+          <p>Lets connect if you want to collaborate...</p>
+        </div>
+        <div class="footer__text-container1">
+          <p><span class='phone'>Phone</span> <strong>91+ 95239*****</strong></p>
+          <p><span class='email'>Email</span> <strong>rp808462@gmail.com</strong></p>
+        </div>
+      </div>
+      <hr class='footer__nav-hr'>
+      <nav class="footer__nav">
+        <h2>Ravi Kumar</h2>
+        <ul class='footer__nav-links'>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li class='link'><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class='to-top'><a href="#top"><strong>BACK TO TOP</strong></a></p>
+      </nav>
+    </footer>
+  </main>
+</div>
+
+<script src="myscript.js"></script>
+
+</body>
+</html>
